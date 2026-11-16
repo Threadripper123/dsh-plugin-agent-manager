@@ -1,0 +1,8 @@
+# dsh-plugin-agent-manager bundle patch.
+#
+# 宿主侧：注册专家管理 API 路由。
+# 客户端：client.js 提供侧边栏入口与独立页面。
+
+- insert:
+    - id: agent-manager
+      name: dsh-plugin-agent-manager

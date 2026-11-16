@@ -1,0 +1,56 @@
+{
+  "name": "dsh-plugin-agent-manager",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "client.js"
+  ],
+  "description": "DSH 专家管理：查看、启停、卸载与安装自定义专家与专家团。",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Threadripper123",
+    "url": "https://github.com/Threadripper123"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Threadripper123/dsh-plugin-agent-manager.git"
+  },
+  "homepage": "https://github.com/Threadripper123/dsh-plugin-agent-manager#readme",
+  "bugs": {
+    "url": "https://github.com/Threadripper123/dsh-plugin-agent-manager/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "agents",
+    "agent-manager"
+  ]
+}
